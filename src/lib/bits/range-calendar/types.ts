@@ -9,7 +9,7 @@ import type {
 import type * as I from "./_types.js";
 import type { CustomEventHandler } from "$lib";
 
-type Props = I.Props & Omit<HTMLDivAttributes, "placeholder">;
+type Props = I.Props & Omit<HTMLDivAttributes, "placeholder"> & { highlight: boolean, startMonth: number | undefined, startDay: number | undefined, endMonth: number | undefined, endDay: number | undefined };
 
 type PrevButtonProps = I.PrevButtonProps & HTMLButtonAttributes;
 
@@ -31,7 +31,7 @@ type GridRowProps = I.GridRowProps & HTMLAttributes<HTMLTableRowElement>;
 
 type CellProps = I.CellProps & HTMLTdAttributes;
 
-type DayProps = I.DayProps & HTMLDivAttributes;
+type DayProps = I.DayProps & HTMLDivAttributes & { highlight: boolean, startMonth: number | undefined, startDay: number | undefined, endMonth: number | undefined, endDay: number | undefined };
 
 /**
  * Events
